@@ -64,7 +64,10 @@ export const TitlePage = () => {
 
     return (
         <>
-            <h1 ref={title} className={styles.title}>
+            <h1 ref={title} style={langstate === 0 ?{
+                fontFamily: 'Rubik',
+                fontWeight: '500'
+            }: {}} className={styles.title}>
                 {messageBodyStr}
             </h1>
             <svg
