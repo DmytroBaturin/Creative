@@ -1,8 +1,8 @@
 import styles from './index.module.scss'
 export const Info = () => {
     return(
-        <div className={styles.main}>
-          <span className={styles.title}>
+        <div id='title' className={styles.main}>
+          <span  className={styles.title}>
               <h1>Dmytro Baturin.</h1>
               <p>front-end developer</p>
           </span>

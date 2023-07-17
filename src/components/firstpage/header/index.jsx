@@ -92,18 +92,6 @@ export const Header = () => {
         >
           {langstate === 1 ? 'about me.' : 'Про мене.'}
         </Link>
-        <p
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-          {langstate === 1 ? 'contact.' : 'Контакт.'}
-        </p>
-        <p
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-        >
-          {langstate === 1 ? 'works.' : 'Роботи.'}
-        </p>
       </span>
         </div>
     );
