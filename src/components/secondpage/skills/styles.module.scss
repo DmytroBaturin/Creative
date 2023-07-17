@@ -36,3 +36,8 @@
   50% { top: -450px; }
   100% {top: 0;}
 }
+@media only screen and (max-width: 600px) {
+  .black{
+    margin: 320px auto;
+  }
+}

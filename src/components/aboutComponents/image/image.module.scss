@@ -14,3 +14,8 @@
   position: absolute;
   margin-top: 140px;
 }
+@media only screen and (max-width: 600px) {
+  .container{
+    display: none;
+  }
+}

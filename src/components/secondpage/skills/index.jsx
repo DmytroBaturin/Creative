@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 export const Skills = () => {
     const refS = useRef(null);
     const skills = ['<HTML/>', '.CSS',"module.SASS", 'JS()', 'Redux Toolkit', "Git"];
-
     return (
         <>
             <div className={styles.black}>
