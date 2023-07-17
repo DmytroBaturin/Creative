@@ -11,6 +11,7 @@ import {
 import {Header} from "./components/firstpage/header/index.jsx";
 import {FirstPage} from "./pages/firstPage.jsx";
 import {About} from "./pages/about.jsx";
+import {Footer} from "./components/footer/index.jsx";
 function App() {
     return (
         <BrowserRouter>
@@ -22,7 +23,7 @@ function App() {
                 />}/>
                 <Route path='/about' element={<About/>}/>
             </Routes>
-
+            <Footer/>
         </div>
         </BrowserRouter>
     );

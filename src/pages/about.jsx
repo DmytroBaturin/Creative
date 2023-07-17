@@ -1,5 +1,7 @@
 import {useLocation} from "react-router-dom";
+import './indexPage.scss'
 import {ImageSec} from "../components/aboutComponents/image/index.jsx";
+import {Info} from "../components/aboutComponents/info/index.jsx";
 
 export const About = () => {
     const location = useLocation()
@@ -7,7 +9,10 @@ export const About = () => {
 
     return(
         <>
+           <div className="page2">
            <ImageSec/>
+            <Info/>
+           </div>
         </>
     )
 }

@@ -1,15 +1,17 @@
-import { useEffect, useMemo, useRef } from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import { gsap } from "gsap";
 import styles from "./titlepage.module.scss";
 import { TextPlugin } from "gsap/dist/TextPlugin";
 import { useDispatch, useSelector } from "react-redux";
 import { setCursor } from "../../../store/cursorSlice.js";
+import {setComplete} from "../../../store/langSlice.js";
 
 gsap.registerPlugin(TextPlugin);
 
 export const TitlePage = () => {
     const dispatch = useDispatch();
     const langstate = useSelector((state) => state.language.value);
+    const langcomplete = useSelector((state) => state.language.complete)
     const messageBodyStr =
         langstate === 1 ? "All what you must know about me." : "Все що вам потрібно знати про мене.";
     const arrow = useRef(null);
@@ -37,7 +39,18 @@ export const TitlePage = () => {
         });
     }, []);
 
-        const tl = gsap.timeline({ repeat: 0 });
+    const [animationComplete, setAnimationComplete] = useState(false);
+
+    dispatch(setComplete({
+        complete: animationComplete
+    }))
+
+    useEffect(() => {
+        const tl = gsap.timeline({
+            repeat: 0,
+            onComplete: () => setAnimationComplete(true),
+        });
+        setAnimationComplete(false); // Сбрасываем значение animationComplete перед началом анимации
         for (let i = 0; i < messageBodyStr.length; i++) {
             tl.to(title.current, {
                 duration: 0.17,
@@ -47,6 +60,7 @@ export const TitlePage = () => {
                 },
             });
         }
+    }, [messageBodyStr]);
 
     return (
         <>
