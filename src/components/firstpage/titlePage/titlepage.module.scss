@@ -17,12 +17,11 @@
 }
 @media only screen and (max-width: 600px) {
   .title{
-    padding-top: 150px;
+  height: 450px;
   font-weight: bolder;
   width: 50%;
   }
   .arrow{
-    margin: 220px auto;
-    display: flex;
+    display: none;
   }
 }
