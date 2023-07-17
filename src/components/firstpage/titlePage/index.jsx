@@ -37,7 +37,6 @@ export const TitlePage = () => {
         });
     }, []);
 
-    const masterTL = useMemo(() => {
         const tl = gsap.timeline({ repeat: 0 });
         for (let i = 0; i < messageBodyStr.length; i++) {
             tl.to(title.current, {
@@ -48,8 +47,6 @@ export const TitlePage = () => {
                 },
             });
         }
-        return tl;
-    }, []);
 
     return (
         <>
