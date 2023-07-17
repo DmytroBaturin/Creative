@@ -1,0 +1,20 @@
+.cursor {
+    width: 10px;
+    height: 10px;
+    z-index: -1;
+    background: white;
+    position: absolute;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.cursor-delay {
+    z-index: -1;
+    mix-blend-mode: difference;
+    width: 30px;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    position: absolute;
+    border: 1.2px solid white;
+    border-radius: 50%;
+}

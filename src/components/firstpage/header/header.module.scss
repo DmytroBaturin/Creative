@@ -1,0 +1,17 @@
+.header{
+  font-family: "Manrope", sans-serif !important;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.rowHeader:not(:first-child){
+  display: flex;
+  gap: 9vw;
+}
+.rowHeader{
+  align-items: center;
+  display: flex;
+}
