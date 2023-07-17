@@ -17,7 +17,6 @@
   background: white;
 }
 .info{
-
   align-items: center;
   margin-top: 30px;
   margin-bottom: 50px;
@@ -42,7 +41,6 @@
   color: cornflowerblue;
 }
 .tg{
-
   font-size: 30px;
   font-weight: bolder;
   color: #64c8ed;
@@ -54,5 +52,11 @@
   }
   span{
     padding-right: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+
+  .info{
+    flex-direction: column;
   }
 }
