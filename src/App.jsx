@@ -6,12 +6,12 @@ import {Secondpage} from "./components/secondpage/index.jsx";
 import {
     BrowserRouter,
     Route,
-    Routes
+    Routes, useLocation
 } from "react-router-dom";
 import {Header} from "./components/firstpage/header/index.jsx";
 import {FirstPage} from "./pages/firstPage.jsx";
+import {About} from "./pages/about.jsx";
 function App() {
-
     return (
         <BrowserRouter>
         <div className="main">
@@ -20,7 +20,7 @@ function App() {
             <Routes>
                 <Route index path='/' element={<FirstPage
                 />}/>
-
+                <Route path='/about' element={<About/>}/>
             </Routes>
 
         </div>

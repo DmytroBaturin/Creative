@@ -1,24 +1,26 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { gsap } from "gsap";
-import styles from "./titlepage.module.scss"
+import styles from "./titlepage.module.scss";
 import { TextPlugin } from "gsap/dist/TextPlugin";
-import {useDispatch, useSelector} from "react-redux";
-import {setCursor} from "../../../store/cursorSlice.js";
+import { useDispatch, useSelector } from "react-redux";
+import { setCursor } from "../../../store/cursorSlice.js";
 
 gsap.registerPlugin(TextPlugin);
 
 export const TitlePage = () => {
-    const dispatch = useDispatch()
-    const langstate = useSelector(state => state.language.value);
-    const messageBodyStr = langstate === 1 ? "All what you must know about me.": "Все що вам потрібно знати про мене."
+    const dispatch = useDispatch();
+    const langstate = useSelector((state) => state.language.value);
+    const messageBodyStr =
+        langstate === 1 ? "All what you must know about me." : "Все що вам потрібно знати про мене.";
     const arrow = useRef(null);
     const title = useRef(null);
     const scrollTo = () => {
         window.scroll({
             top: 670,
-            behavior: 'smooth'
-        })
-    }
+            behavior: "smooth",
+        });
+    };
+
     useEffect(() => {
         const tl = gsap.timeline({ repeat: -1 });
         tl.from(arrow.current, {
@@ -33,16 +35,20 @@ export const TitlePage = () => {
             yoyoEase: true,
             repeat: -1,
         });
-        const masterTL = gsap.timeline({ repeat: 0 });
+    }, []);
+
+    const masterTL = useMemo(() => {
+        const tl = gsap.timeline({ repeat: 0 });
         for (let i = 0; i < messageBodyStr.length; i++) {
-            masterTL.to(title.current, {
+            tl.to(title.current, {
                 duration: 0.17,
                 text: {
                     value: messageBodyStr.substr(0, i + 1),
-                    delimiter: ""
+                    delimiter: "",
                 },
             });
         }
+        return tl;
     }, []);
 
     return (
@@ -50,23 +56,14 @@ export const TitlePage = () => {
             <h1 ref={title} className={styles.title}>
                 {messageBodyStr}
             </h1>
-            <svg onClick={() => {
-                scrollTo()
-            }}
+            <svg
+                onClick={scrollTo}
                 onMouseEnter={() => {
-                dispatch(setCursor(
-                    {
-                        value: 1
-                    }
-                ))
-            }}
-                  onMouseLeave={() => {
-                      dispatch(setCursor(
-                          {
-                              value: 0
-                          }
-                      ))
-                  }}
+                    dispatch(setCursor({ value: 1 }));
+                }}
+                onMouseLeave={() => {
+                    dispatch(setCursor({ value: 0 }));
+                }}
                 ref={arrow}
                 className={styles.arrow}
                 xmlns="http://www.w3.org/2000/svg"
