@@ -1,7 +1,7 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const initialState = {
-    value: 0,
+    value: 1,
     complete: false,
 };
 
