@@ -1,4 +1,5 @@
 .main{
+  margin-right: 8%;
   color: white;
   display: flex;
   margin-top: 150px;
@@ -10,7 +11,7 @@
   padding: 0;
    p{
      margin: 0;
-     font-weight: bold;
+     font-weight: initial;
      padding: 0;
      float: right;
    }
@@ -28,6 +29,6 @@
     margin-bottom: 20px;
   }
   p{
-
+    font-weight: 200;
   }
 }

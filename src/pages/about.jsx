@@ -10,8 +10,8 @@ export const About = () => {
     return(
         <>
            <div className="page2">
-           <ImageSec/>
             <Info/>
+            <ImageSec/>
            </div>
         </>
     )
