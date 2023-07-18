@@ -1,30 +1,27 @@
-import React, {useState} from "react";
+import React, { useEffect, useRef } from "react";
 import "./App.scss";
+import { BrowserRouter } from "react-router-dom";
+import { Header } from "./components/header/index.jsx";
+import { Title } from "./components/title/index.jsx";
 import { Cursor } from "./components/cursor/index.jsx";
-import {Firstpage} from "./components/firstpage/index.jsx";
-import {Secondpage} from "./components/secondpage/index.jsx";
-import {
-    BrowserRouter,
-    Route,
-    Routes, useLocation
-} from "react-router-dom";
-import {Header} from "./components/firstpage/header/index.jsx";
-import {FirstPage} from "./pages/firstPage.jsx";
-import {About} from "./pages/about.jsx";
-import {Footer} from "./components/footer/index.jsx";
+import { Line } from "./components/line/index.jsx";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 function App() {
+    const pagesRef = useRef([]);
+    gsap.registerPlugin(ScrollTrigger);
     return (
         <BrowserRouter>
-        <div className="main">
-            <Cursor/>
-            <Header/>
-            <Routes>
-                <Route index path='/' element={<FirstPage
-                />}/>
-                <Route path='/about' element={<About/>}/>
-            </Routes>
-            <Footer/>
-        </div>
+            <div>
+                <div ref={(ref) => (pagesRef.current[0] = ref)} className="page">
+                    <Cursor />
+                    <Header />
+                    <Title />
+                    <Line pageRef={pagesRef.current} />
+                </div>
+
+            </div>
         </BrowserRouter>
     );
 }

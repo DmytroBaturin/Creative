@@ -1,0 +1,29 @@
+.title{
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  margin-top: 33vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  h1{
+    max-width: 80vw;
+    width: 60vw;
+    font-size: clamp(6vh, 4vw, 16vh);
+    font-weight: 300;
+  }
+  button{
+    border: none;
+    font-weight: 300;
+    margin-top: 20vh;
+    background: none;
+    font-size: clamp(1vh, 4vw, 3vh);
+  }
+}
+.triger{
+  width: 10px;
+  background: wheat;
+  height: 10px;
+  margin-top: 20px;
+}

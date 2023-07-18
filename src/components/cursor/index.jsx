@@ -1,41 +1,35 @@
-import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
-import "./cursor.css";
-import { useSelector } from "react-redux";
+import styles from './cursor.module.scss'
+import {useEffect, useRef} from "react";
+import {gsap} from "gsap";
 
 export const Cursor = () => {
-    const cursorRef = useRef(null);
-    const cursor = useSelector(state => state.cursor.value);
-    if (cursor === 1) {
-        gsap.to(".cursor", {
-            scale: 3
-        });
-    }else {
-        gsap.to(".cursor", {
-            scale: 1,
-        });
+
+    const mouseMove = (e) => {
+        gsap.to('#cursor',
+            {
+                ease:'power3.out',
+                duration: 0.3,
+                x: e.clientX,
+                y: e.clientY
+            })
+        gsap.to('#cursordelay', {
+            ease:'power3.out',
+            duration: 0.5,
+            x: e.clientX,
+            y: e.clientY
+        })
     }
     useEffect(() => {
-        document.addEventListener("mousemove", (e) => {
+     window.addEventListener("mousemove", mouseMove);
+     return () => {
+         window.removeEventListener("mousemove", mouseMove);
+     }
+    })
 
-            gsap.to(".cursor", {
-                duration: 0.3,
-                x: e.pageX,
-                y: e.pageY,
-            });
-
-            gsap.to(".cursor-delay", {
-                duration: 0.4,
-                x: e.pageX,
-                y: e.pageY,
-            });
-        });
-    }, []);
-
-    return (
+    return(
         <>
-            <div ref={cursorRef} className="cursor"></div>
-            <div className="cursor-delay"></div>
+            <div id='cursor' className={styles.cursor}></div>
+            <div id='cursordelay' className={styles.cursorDelay}></div>
         </>
-    );
-};
+    )
+}
