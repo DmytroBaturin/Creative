@@ -5,11 +5,7 @@
   position: fixed;
   svg{
     mix-blend-mode: difference;
-    animation: "fillAnimation 0.4s ease-in-out";
    min-height: 315px;
   }
 }
-@keyframes fillAnimation {
-  0% { fill: #1A1A1A; }
-  100% { fill: white; }
-}
+

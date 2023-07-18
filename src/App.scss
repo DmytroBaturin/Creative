@@ -6,66 +6,30 @@ html{
   cursor: none;
 }
 body{
-
+  overflow-x: hidden;
+  height: 100%;
   font-family: League Spartan, sans-serif;
   font-weight: 300;
   background-color: rgba(0, 0, 0, 0.95);
   h1, h2, p, span, button{
-
     font-family: League Spartan, sans-serif;
     color: white;
   }
 }
+.container {
+  color: white;
+  width: 300vw;
+  display: flex;
+  flex-wrap: wrap;
+  .panel{
+    width: 100vw;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+  }
+}
 .page{
   height: 100vh;
-}
-.page:not(:first-child){
-  mix-blend-mode: difference;
-  background-color: white;
-}
-.pages{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.panel{
-  color: white;
-}
-html {
-  overflow-y: scroll;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
-}
-body {
-  overflow-y: visible;
-  position: relative;
-  height: unset;
-}
-html, body {
-  overflow-x: hidden;
-  margin: 0;
-}
-
-.container {
-  width: 400%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.firstContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: yellow;
-}
-
-.lastContainer {
-  display: flex;
-  height: 100vh;
-  background: yellow;
 }

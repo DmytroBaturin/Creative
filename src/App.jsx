@@ -1,28 +1,68 @@
-import React, { useEffect, useRef } from "react";
+import React, {useEffect, useLayoutEffect, useRef} from "react";
 import "./App.scss";
-import { BrowserRouter } from "react-router-dom";
 import { Header } from "./components/header/index.jsx";
 import { Title } from "./components/title/index.jsx";
 import { Cursor } from "./components/cursor/index.jsx";
 import { Line } from "./components/line/index.jsx";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {gsap} from "gsap";
+gsap.registerPlugin(ScrollTrigger)
+import { ScrollTrigger} from "gsap/ScrollTrigger";
+import {Footer} from "./components/footer/index.jsx";
+import {SectionOne} from "./components/sections/one/index.jsx";
+import {SectionTwo} from "./components/sections/two/index.jsx";
 
 function App() {
-    const pagesRef = useRef([]);
-    gsap.registerPlugin(ScrollTrigger);
-    return (
-        <BrowserRouter>
-            <div>
-                <div ref={(ref) => (pagesRef.current[0] = ref)} className="page">
-                    <Cursor />
-                    <Header />
-                    <Title />
-                    <Line pageRef={pagesRef.current} />
-                </div>
 
+    const pagesRef = useRef([]);
+    const component = useRef();
+    const slider = useRef();
+    const panels = useRef([]);
+
+    useEffect(() => {
+        const scroller = gsap.fromTo(
+            slider.current, {
+                translateX: 0,
+            }, {
+                translateX: '-300vw',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: slider.current,
+                    start: 'center center',
+                    pin: true,
+                    scrub: 1,
+                }
+            }
+        )
+        return () => scroller.kill();
+    }, [])
+
+
+    return (
+        <>
+            <Cursor/>
+            <Line pageRef={pagesRef.current} />
+            <div className="pages">
+            <Header />
+                <div ref={(ref) => (pagesRef.current[0] = ref)} className="page">
+                    <Title />
+                </div>
+                <div ref={slider} className='container'>
+                    <div ref={(ref) => (panels.current[0] = ref)} className='panel'>
+                       <SectionOne/>
+                    </div>
+                    <div style={{
+                        background: 'white',
+                        zIndex: '-1',
+                    }} ref={(ref) => (panels.current[1] = ref)} className='panel'>
+                        <SectionTwo/>
+                    </div>
+                    <div ref={(ref) => (panels.current[2] = ref)} className='panel'>
+                        <SectionOne/>
+                    </div>
+                </div>
+            <Footer/>
             </div>
-        </BrowserRouter>
+        </>
     );
 }
 

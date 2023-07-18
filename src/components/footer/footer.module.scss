@@ -1,0 +1,41 @@
+.line{
+  border-radius: 20px;
+  width: 90%;
+  height: 2px;
+  background: white;
+}
+.footer{
+  font-size: 16px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info{
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.contacts{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  a{
+    font-size: 20px;
+  }
+}
+.ig{
+  font-size: 44px;
+  color: orange;
+}
+.tg{
+  font-size: 44px;
+  color: cornflowerblue;
+}
+.ln{
+  font-size: 44px;
+  color: darkturquoise;
+}

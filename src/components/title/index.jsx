@@ -12,6 +12,7 @@ export const Title = () => {
                 All what you must know
                 about me.
             </h1>
+                <p>scroll down</p>
             </div>
         </div>
     )

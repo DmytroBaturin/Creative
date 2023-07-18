@@ -2,7 +2,7 @@
   padding-top: 4vh;
   margin-right: 10%;
   margin-left: 10%;
-  font-size: clamp(1vh, 3vw, 3vh);
+  font-size: clamp(1vh, 3vw, 2.4vh);
   color: white;
   font-weight: 300;
   display: flex;
@@ -14,7 +14,7 @@
     background: none;
     font-weight: 300;
     border: none;
-    font-size: clamp(1vh, 3vw, 3vh);
+    font-size: clamp(1vh, 3vw, 2.4vh);
     cursor: pointer;
   }
 }
