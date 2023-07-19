@@ -31,11 +31,12 @@ function App() {
                 end: () => "=+ 2007"
             }
         })
+        console.log(window.innerHeight)
         const backgroundColorTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: ".container",
                 start: "top center",
-                end: "1900",
+                end: "90%",
                 scrub: -2,
             },
         });
