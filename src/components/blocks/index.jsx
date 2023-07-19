@@ -7,7 +7,7 @@ export const Blocks = () => {
             <div className='blocks'>
                 <div className='b js'>
                     <div className='opacitycontent'>
-                    <h1>Js</h1>
+                    <h1>JS</h1>
                         <div className='line'></div>
                         <p>I try to learn JS as best as possible, I read books, documentation to know all the little details of this language, which I love very much for its "simplicity", and at the same time the power for the frontend, I have been studying JS for 6 months</p>
                     </div>
