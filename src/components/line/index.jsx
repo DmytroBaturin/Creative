@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./line.module.scss";
 
-export const Line = ({ pageRef }) => {
+export const Line = () => {
     const [scrollY, setScrollY] = useState(0);
     const calculateHeight = () => {
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const maxHeight = 500;
+        const maxHeight = 400;
         const minHeight = 8;
         return (maxHeight - minHeight) * (scrollY / maxScroll) + minHeight;
     };
@@ -23,7 +23,7 @@ export const Line = ({ pageRef }) => {
 
     return (
         <div style={calculateHeight() >= 300 ? {
-            transition: 'opacity 0.3s ease-in-out',
+            transition: 'opacity 0.1s ease-in-out',
             opacity: 0.1,
         }: {
             transition: 'opacity 0.2s ease-in-out',

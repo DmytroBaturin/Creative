@@ -27,12 +27,16 @@ body{
 }
 .page{
   position: relative;
-  height: 100vh;
+  height: 120vh;
 }
 .page3{
+  margin-left: 20vw;
   width: 50vw !important;
 }
 .panel {
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
+}
+.page2{
+  height: 120vh !important;
 }

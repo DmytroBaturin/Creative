@@ -3,7 +3,11 @@
   display: flex;
   width: 100vw;
   margin-top: 50vh;
-  h1, p {
+  h1{
+    font-size: clamp(4vh, 2vw, 6vh);
+    color: black;
+  }
+  p{
     font-size: clamp(1vh, 2vw, 3vh);
     color: black;
   }
@@ -19,5 +23,5 @@
 }
 .text{
   margin-top: 20px;
-  width: 500px;
+  width: 50vw;
 }

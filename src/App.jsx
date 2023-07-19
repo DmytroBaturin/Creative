@@ -33,16 +33,19 @@ function App() {
         const backgroundColorTimeline = gsap.timeline({
             scrollTrigger: {
                 trigger: ".container",
-                start: "left center",
-                end: "bottom bottom",
+                start: "top center",
+                end: "2040",
                 scrub: -2,
             },
         });
         backgroundColorTimeline
             .to(".page2", {
                 duration: 1,
-            backgroundColor: 'white'
-        },0)
+                backgroundColor: 'white'})
+            .to(".page2", {
+                duration: 1,
+                backgroundColor: 'black'})
+
      return () => {
             backgroundColorTimeline.kill()
      }
@@ -58,7 +61,7 @@ function App() {
                 </div>
                 <div ref={slider} className='container'>
                     <div style={{
-                        height: '120vh',
+                        height: '110vh',
                     }}
                         ref={(ref) => (panels.current[1] = ref)} className='panel page2'>
                         <SectionTwo/>

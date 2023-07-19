@@ -5,7 +5,10 @@
   margin-top: 50vh;
   h1:not(:last-child){
     position: absolute;
-    font-size: 100px;
+    bottom: 0vh;
+    right: 10vw;
+    width: 100%;
+    font-size: clamp(20vh, 2vw, 6vh);
   }
 }
 .img{
@@ -20,8 +23,9 @@
   background-size: cover;
 }
 .main{
+  right: 40vw;
   z-index: -2;
   opacity: 0.2;
-  font-size: 400px;
+  font-size: clamp(30vh, 4vw, 12vh);
   position: absolute;
 }

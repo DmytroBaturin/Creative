@@ -7,7 +7,7 @@ export const Header = () => {
             <span className={styles.language}>
             </span>
             <span className={styles.navbar}>
-                <a href='#' >about me.</a>
+                <a>about me.</a>
                 <a>skills.</a>
                 <a>contact.</a>
             </span>
