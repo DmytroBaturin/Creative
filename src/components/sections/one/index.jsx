@@ -9,6 +9,7 @@ export const SectionOne = () => {
             <h1>Who i am?</h1>
             <div className={styles.img}>
             </div>
+            <h1 className={styles.main}>Who</h1>
         </div>
     )
 }

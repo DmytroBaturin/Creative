@@ -40,8 +40,9 @@ function App() {
         <>
             <Cursor/>
             <Line pageRef={pagesRef.current} />
-            <div className="pages">
             <Header />
+            <div className="pages">
+
                 <div ref={(ref) => (pagesRef.current[0] = ref)} className="page">
                     <Title />
                 </div>
@@ -50,7 +51,7 @@ function App() {
                         height: '120vh',
                         backgroundColor: 'white'
                     }}
-                        ref={(ref) => (panels.current[1] = ref)} className='panel'>
+                        ref={(ref) => (panels.current[1] = ref)} className='panel page2'>
                         <SectionTwo/>
                     </div>
                     <div ref={(ref) => (panels.current[2] = ref)} className='panel'>

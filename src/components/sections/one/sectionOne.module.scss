@@ -3,9 +3,6 @@
   display: flex;
   justify-content: center;
   margin-top: 50vh;
-  h1{
-    font-size: 60px;
-  }
 }
 .img{
   position: absolute;
@@ -17,4 +14,11 @@
   background-image: url('./15867-Black-And-White-Forest-.jpg');
   background-position: center;
   background-size: cover;
+}
+.main{
+  z-index: -2;
+  opacity: 0.2;
+  font-size: 400px;
+  left: 0;
+  position: absolute;
 }

@@ -5,7 +5,9 @@ export const Header = () => {
             <span className={styles.language}>
             </span>
             <span className={styles.navbar}>
-                <a>about me.</a>
+                <a href='' onClick={() => {
+                    console.log('hello')
+                }}>about me.</a>
                 <a>skills.</a>
                 <a>contact.</a>
             </span>
