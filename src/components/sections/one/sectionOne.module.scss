@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
   margin-top: 50vh;
+  h1:not(:last-child){
+    position: absolute;
+    font-size: 100px;
+  }
 }
 .img{
   position: absolute;
@@ -19,6 +23,5 @@
   z-index: -2;
   opacity: 0.2;
   font-size: 400px;
-  left: 0;
   position: absolute;
 }

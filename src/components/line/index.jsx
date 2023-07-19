@@ -5,7 +5,7 @@ export const Line = ({ pageRef }) => {
     const [scrollY, setScrollY] = useState(0);
     const calculateHeight = () => {
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const maxHeight = 399;
+        const maxHeight = 500;
         const minHeight = 8;
         return (maxHeight - minHeight) * (scrollY / maxScroll) + minHeight;
     };
@@ -22,9 +22,9 @@ export const Line = ({ pageRef }) => {
     }, []);
 
     return (
-        <div style={calculateHeight() >= 280 ? {
+        <div style={calculateHeight() >= 300 ? {
             transition: 'opacity 0.3s ease-in-out',
-            opacity: 0,
+            opacity: 0.1,
         }: {
             transition: 'opacity 0.2s ease-in-out',
         }} className={styles.container}>

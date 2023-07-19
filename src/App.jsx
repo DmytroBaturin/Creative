@@ -36,7 +36,6 @@ function App() {
                 start: "left center",
                 end: "bottom bottom",
                 scrub: -2,
-                markers: true
             },
         });
         backgroundColorTimeline
