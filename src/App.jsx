@@ -16,8 +16,6 @@ function App() {
     const pagesRef = useRef([]);
     const slider = useRef();
     const panels = useRef([]);
-
-
     useEffect(() => {
        const scroll = gsap.to(panels.current, {
             xPercent: -100 * (panels.current.length + 1),
@@ -31,30 +29,42 @@ function App() {
                 scrub: -2,
                 end: () => "=+ 2007"
             }
-        }
-        );
+        })
+        const backgroundColorTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".container",
+                start: "left center",
+                end: "bottom bottom",
+                scrub: -2,
+                markers: true
+            },
+        });
+        backgroundColorTimeline
+            .to(".page2", {
+                duration: 1,
+            backgroundColor: 'white'
+        },0)
+     return () => {
+            backgroundColorTimeline.kill()
+     }
     }, []);
-
-
     return (
         <>
             <Cursor/>
             <Line pageRef={pagesRef.current} />
             <Header />
             <div className="pages">
-
                 <div ref={(ref) => (pagesRef.current[0] = ref)} className="page">
                     <Title />
                 </div>
                 <div ref={slider} className='container'>
                     <div style={{
                         height: '120vh',
-                        backgroundColor: 'white'
                     }}
                         ref={(ref) => (panels.current[1] = ref)} className='panel page2'>
                         <SectionTwo/>
                     </div>
-                    <div ref={(ref) => (panels.current[2] = ref)} className='panel'>
+                    <div ref={(ref) => (panels.current[2] = ref)} className='panel page3'>
                         <SectionOne/>
                     </div>
                 </div>
