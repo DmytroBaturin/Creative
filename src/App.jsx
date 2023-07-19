@@ -12,29 +12,42 @@ import {SectionOne} from "./components/sections/one/index.jsx";
 import {SectionTwo} from "./components/sections/two/index.jsx";
 
 function App() {
-
     const pagesRef = useRef([]);
-    const component = useRef();
     const slider = useRef();
     const panels = useRef([]);
 
+    // useEffect(() => {
+    //     const scroller = gsap.fromTo(
+    //         slider.current, {
+    //             translateX: 0,
+    //         }, {
+    //             translateX: '-300vw',
+    //             ease: 'none',
+    //             scrollTrigger: {
+    //                 trigger: slider.current,
+    //                 start: 'center center',
+    //                 pin: true,
+    //                 scrub: 1,
+    //             }
+    //         }
+    //     )
+    //     return () => scroller.kill();
+    // }, [])
     useEffect(() => {
-        const scroller = gsap.fromTo(
-            slider.current, {
-                translateX: 0,
-            }, {
-                translateX: '-300vw',
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: slider.current,
-                    start: 'center center',
-                    pin: true,
-                    scrub: 1,
-                }
+        gsap.to(panels.current, {
+            xPercent: -100 * (panels.current.length + 1),
+            ease: 'none',
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.container',
+                pin: true,
+                start: 'center center',
+                snap: 1 / (panels.current.length - 1),
+                scrub: -2,
+                end: () => "=+ 2007"
             }
-        )
-        return () => scroller.kill();
-    }, [])
+        });
+    }, []);
 
 
     return (
@@ -47,18 +60,19 @@ function App() {
                     <Title />
                 </div>
                 <div ref={slider} className='container'>
-                    <div ref={(ref) => (panels.current[0] = ref)} className='panel'>
-                       <SectionOne/>
-                    </div>
                     <div style={{
-                        background: 'white',
-                        zIndex: '-1',
-                    }} ref={(ref) => (panels.current[1] = ref)} className='panel'>
+                        height: '120vh',
+                        backgroundColor: 'white'
+                    }}
+                        ref={(ref) => (panels.current[1] = ref)} className='panel'>
                         <SectionTwo/>
                     </div>
                     <div ref={(ref) => (panels.current[2] = ref)} className='panel'>
                         <SectionOne/>
                     </div>
+                </div>
+                <div className='panelis'>
+
                 </div>
             <Footer/>
             </div>

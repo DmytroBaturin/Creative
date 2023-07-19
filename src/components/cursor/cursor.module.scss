@@ -2,6 +2,7 @@
    width: 10px;
    height: 10px;
    border-radius: 50%;
+   z-index: 10;
    background-color: #ffffff;
    transform: translate(-50%, -50%);
    position: absolute;
@@ -9,6 +10,7 @@
    pointer-events: none;
 }
 .cursorDelay{
+   z-index: 10;
    width: 30px;
    transform: translate(-50%, -50%);
    height: 30px;
