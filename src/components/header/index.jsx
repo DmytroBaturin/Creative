@@ -1,19 +1,23 @@
 import styles from './header.module.scss';
-import { useEffect } from 'react';
-import { gsap } from 'gsap';
 import {Link} from "react-router-dom";
 export const Header = () => {
     return (
         <span className={styles.header}>
       <span className={styles.language}>
-          <h1
+          <Link
+              style={{
+              textDecoration: "none"
+          }} to='/'><h1
               style={{
                   fontWeight: 400
               }}
-          >creative.</h1>
+          >creative.</h1></Link>
       </span>
       <span className={styles.navbar}>
-        <a>more about me.</a>
+        <Link to='/about' style={{
+            color: "white",
+            textDecoration: "none"
+        }}>more about me.</Link>
       </span>
     </span>
     );

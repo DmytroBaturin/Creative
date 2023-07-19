@@ -33,7 +33,7 @@ export const Title = () => {
             <div className='zoom-in'>
                 <h1 ref={titleRef}>
                     All what you must know
-                    about me<span ref={point} id='point'>.</span>
+                    about me<span ref={point} className={styles.point}>.</span>
                 </h1>
             </div>
         </div>

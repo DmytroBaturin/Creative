@@ -23,3 +23,15 @@
     font-size: clamp(1vh, 4vw, 3vh);
   }
 }
+.point{
+  opacity: 0.1;
+}
+@keyframes opacitypoint {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

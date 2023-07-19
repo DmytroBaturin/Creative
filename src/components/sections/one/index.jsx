@@ -1,7 +1,4 @@
 import styles from './sectionOne.module.scss'
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {useEffect, useRef} from "react";
 
 export const SectionOne = () => {
     return(

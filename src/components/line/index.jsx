@@ -5,11 +5,10 @@ export const Line = () => {
     const [scrollY, setScrollY] = useState(0);
     const calculateHeight = () => {
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const maxHeight = 380;
+        const maxHeight = 345;
         const minHeight = 8;
         return (maxHeight - minHeight) * (scrollY / maxScroll) + minHeight;
     };
-
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -23,8 +22,8 @@ export const Line = () => {
 
     return (
         <div style={calculateHeight() >= 300 ? {
-            transition: 'opacity 0.1s ease-in-out',
-            opacity: 0.1,
+            transition: 'opacity 0.4s ease-in-out',
+            opacity: 0.05,
         }: {
             transition: 'opacity 0.2s ease-in-out',
         }} className={styles.container}>
