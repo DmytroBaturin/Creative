@@ -1,0 +1,20 @@
+.section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 50vh;
+  h1{
+    font-size: 60px;
+  }
+}
+.img{
+  position: absolute;
+  width: 30vw;
+  bottom: -15vw;
+  height: 70vh;
+  right: 10vw;
+  z-index: -1;
+  background-image: url('./15867-Black-And-White-Forest-.jpg');
+  background-position: center;
+  background-size: cover;
+}

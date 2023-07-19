@@ -22,8 +22,8 @@ export const Line = ({ pageRef }) => {
     }, []);
 
     return (
-        <div style={calculateHeight() >= 300 ? {
-            transition: 'opacity 0.1s ease-in-out',
+        <div style={calculateHeight() >= 280 ? {
+            transition: 'opacity 0.3s ease-in-out',
             opacity: 0,
         }: {
             transition: 'opacity 0.2s ease-in-out',

@@ -16,25 +16,9 @@ function App() {
     const slider = useRef();
     const panels = useRef([]);
 
-    // useEffect(() => {
-    //     const scroller = gsap.fromTo(
-    //         slider.current, {
-    //             translateX: 0,
-    //         }, {
-    //             translateX: '-300vw',
-    //             ease: 'none',
-    //             scrollTrigger: {
-    //                 trigger: slider.current,
-    //                 start: 'center center',
-    //                 pin: true,
-    //                 scrub: 1,
-    //             }
-    //         }
-    //     )
-    //     return () => scroller.kill();
-    // }, [])
+
     useEffect(() => {
-        gsap.to(panels.current, {
+       const scroll = gsap.to(panels.current, {
             xPercent: -100 * (panels.current.length + 1),
             ease: 'none',
             duration: 1,
@@ -46,7 +30,8 @@ function App() {
                 scrub: -2,
                 end: () => "=+ 2007"
             }
-        });
+        }
+        );
     }, []);
 
 
@@ -72,7 +57,6 @@ function App() {
                     </div>
                 </div>
                 <div className='panelis'>
-
                 </div>
             <Footer/>
             </div>
