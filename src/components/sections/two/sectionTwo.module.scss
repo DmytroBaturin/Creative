@@ -1,9 +1,23 @@
 .section{
   justify-content: center;
   display: flex;
+  width: 100vw;
   margin-top: 50vh;
-  h1{
+  h1, p {
+    font-size: clamp(1vh, 2vw, 3vh);
     color: black;
   }
-
+}
+.title{
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  p{
+    display: flex;
+    float: right;
+  }
+}
+.text{
+  margin-top: 20px;
+  width: 500px;
 }

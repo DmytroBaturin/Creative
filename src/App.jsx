@@ -10,6 +10,7 @@ import { ScrollTrigger} from "gsap/ScrollTrigger";
 import {Footer} from "./components/footer/index.jsx";
 import {SectionOne} from "./components/sections/one/index.jsx";
 import {SectionTwo} from "./components/sections/two/index.jsx";
+import {Blocks} from "./components/blocks/index.jsx";
 
 function App() {
     const pagesRef = useRef([]);
@@ -56,8 +57,7 @@ function App() {
                         <SectionOne/>
                     </div>
                 </div>
-                <div className='panelis'>
-                </div>
+              <Blocks/>
             <Footer/>
             </div>
         </>
