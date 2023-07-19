@@ -1,16 +1,20 @@
-import styles from './header.module.scss'
+import styles from './header.module.scss';
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import {Link} from "react-router-dom";
 export const Header = () => {
-    return(
-        <span onClick={() => {
-            console.log('hello')
-        }} className={styles.header}>
-            <span className={styles.language}>
-            </span>
-            <span className={styles.navbar}>
-                <a>about me.</a>
-                <a>skills.</a>
-                <a>contact.</a>
-            </span>
-        </span>
-    )
-}
+    return (
+        <span className={styles.header}>
+      <span className={styles.language}>
+          <h1
+              style={{
+                  fontWeight: 400
+              }}
+          >creative.</h1>
+      </span>
+      <span className={styles.navbar}>
+        <a>more about me.</a>
+      </span>
+    </span>
+    );
+};

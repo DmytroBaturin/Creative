@@ -11,6 +11,7 @@ import {Footer} from "./components/footer/index.jsx";
 import {SectionOne} from "./components/sections/one/index.jsx";
 import {SectionTwo} from "./components/sections/two/index.jsx";
 import {Blocks} from "./components/blocks/index.jsx";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
     const pagesRef = useRef([]);
@@ -34,7 +35,7 @@ function App() {
             scrollTrigger: {
                 trigger: ".container",
                 start: "top center",
-                end: "2040",
+                end: "1900",
                 scrub: -2,
             },
         });
@@ -44,7 +45,7 @@ function App() {
                 backgroundColor: 'white'})
             .to(".page2", {
                 duration: 1,
-                backgroundColor: 'black'})
+                backgroundColor: '#0C0C0C'})
 
      return () => {
             backgroundColorTimeline.kill()
@@ -52,16 +53,19 @@ function App() {
     }, []);
     return (
         <>
+            <BrowserRouter>
             <Cursor/>
             <Line pageRef={pagesRef.current} />
-            <Header />
+                <Header />
+
             <div className="pages">
                 <div ref={(ref) => (pagesRef.current[0] = ref)} className="page">
                     <Title />
                 </div>
                 <div ref={slider} className='container'>
-                    <div style={{
+                    <div id='selection1' style={{
                         height: '110vh',
+                        background: 'black'
                     }}
                         ref={(ref) => (panels.current[1] = ref)} className='panel page2'>
                         <SectionTwo/>
@@ -71,8 +75,9 @@ function App() {
                     </div>
                 </div>
               <Blocks/>
-            <Footer/>
             </div>
+                <Footer/>
+            </BrowserRouter>
         </>
     );
 }

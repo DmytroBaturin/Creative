@@ -5,7 +5,7 @@ export const Line = () => {
     const [scrollY, setScrollY] = useState(0);
     const calculateHeight = () => {
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const maxHeight = 400;
+        const maxHeight = 380;
         const minHeight = 8;
         return (maxHeight - minHeight) * (scrollY / maxScroll) + minHeight;
     };

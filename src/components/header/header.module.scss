@@ -1,6 +1,7 @@
 .header{
   padding-top: 4vh;
   margin-right: 10%;
+  align-items: center;
   margin-left: 10%;
   font-size: clamp(1vh, 3vw, 2.4vh);
   color: white;
@@ -24,4 +25,11 @@
   }
   display: flex;
   gap: 5vw;
+  button{
+    font-size: clamp(1vh, 3vw, 2.4vh);
+    background: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: 0.6px solid white;
+  }
 }
