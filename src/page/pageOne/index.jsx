@@ -13,12 +13,10 @@ export const Page1 = () => {
         const scroll = gsap.to(panels.current, {
             xPercent: -100 * (panels.current.length + 1),
             ease: 'none',
-            duration: 1,
             scrollTrigger: {
                 trigger: '.container',
                 pin: true,
                 start: 'center center',
-                snap: 1 / (panels.current.length - 1),
                 scrub: -2,
                 end: () => "=+ 2007"
             }
@@ -27,7 +25,7 @@ export const Page1 = () => {
             scrollTrigger: {
                 trigger: ".container",
                 start: "top center",
-                end: "95%",
+                end: "100%",
                 scrub: -2,
             },
         });
