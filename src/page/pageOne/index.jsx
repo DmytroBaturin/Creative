@@ -51,7 +51,7 @@ export const Page1 = () => {
             <div ref={slider} className='container'>
                 <div id='selection1' style={{
                     height: '110vh',
-                    background: 'black'
+                    background: '#0C0C0C'
                 }}
                      ref={(ref) => (panels.current[1] = ref)} className='panel page2'>
                     <SectionTwo/>
