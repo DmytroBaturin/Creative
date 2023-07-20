@@ -10,6 +10,7 @@ export const Page1 = () => {
     const slider = useRef();
     const panels = useRef([]);
     useEffect(() => {
+
         const scroll = gsap.to(panels.current, {
             xPercent: -100 * (panels.current.length + 1),
             ease: 'none',

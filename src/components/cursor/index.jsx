@@ -24,16 +24,17 @@ export const Cursor = () => {
         const onMouseHover = () => {
             gsap.to("#cursor", {
                 ease: 'power3.out',
-                scale: 3
+                scale: 3.3,
+                duration: 1
             });
         }
         const onMouseHoverOut = () => {
             gsap.to("#cursor", {
                 ease: 'power3.out',
-                scale: 1
+                scale: 1,
+                duration: 1
             });
         }
-
             for (let i = 0; i < hoverables.length; i++) {
                 hoverables[i].addEventListener('mouseenter', onMouseHover);
                 hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
