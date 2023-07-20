@@ -1,9 +1,10 @@
 *{
+  cursor: none;
   margin: 0;
   padding: 0;
 }
 html{
-  cursor: none;
+
 }
 body{
   overflow-x: hidden;
@@ -18,7 +19,7 @@ body{
 }
 .container {
   z-index: -10;
-  margin-top: 50vh;
+  margin-top: 120vh;
   height: 100vh;
   color: white;
   position: relative;

@@ -7,9 +7,9 @@ export const Footer = () => {
                 <p>contact</p>
                    <p>dbaturin02@gmail.com</p>
                 <span className={styles.contacts}>
-                    <a target='_blank' href='https://www.instagram.com/dimon.baturin/'><span className={styles.ig}>.</span>instagram</a>
-                     <a target='_blank' href='https://t.me/m5ddddd'><span className={styles.tg}>.</span>telegram</a>
-                     <a target='_blank' href='https://www.linkedin.com/in/dima-baturin-aba9ba280/'><span className={styles.ln}>.</span>linkedin</a>
+                    <a className='hoverable' target='_blank' href='https://www.instagram.com/dimon.baturin/'><span className={styles.ig}>.</span>instagram</a>
+                     <a className='hoverable' target='_blank' href='https://t.me/m5ddddd'><span className={styles.tg}>.</span>telegram</a>
+                     <a className='hoverable' target='_blank' href='https://www.linkedin.com/in/dima-baturin-aba9ba280/'><span className={styles.ln}>.</span>linkedin</a>
                 </span>
             </span>
         </div>

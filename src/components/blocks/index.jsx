@@ -5,14 +5,14 @@ export const Blocks = () => {
     return(
         <div className='panelis'>
             <div className='blocks'>
-                <div className='b js'>
+                <div className='b hoverable js'>
                     <div className='opacitycontent'>
                     <h1>JS</h1>
                         <div className='line'></div>
                         <p>I try to learn JS as best as possible, I read books, documentation to know all the little details of this language, which I love very much for its "simplicity", and at the same time the power for the frontend, I have been studying JS for 6 months</p>
                     </div>
                 </div>
-                <div className='b html'>
+                <div className='b hoverable html'>
                     <div className='opacitycontent'>
                     <h1>HTML/CSS/SASS</h1>
                         <div className='line'></div>
@@ -21,14 +21,14 @@ export const Blocks = () => {
                         </p>
                     </div>
                 </div>
-                <div className='b github'>
+                <div className='b hoverable github'>
                     <div className='opacitycontent'>
                     <h1>Github</h1>
                         <div className='line'></div>
                         <p>Before, Git Hub seemed to me to be something complicated and not very necessary, but now I can't overestimate the usefulness and basicity of Git, I've been studying it for a short time, but I know basic things like creating branches, commits and pulls</p>
                     </div>
                 </div>
-                <div className='b redux'>
+                <div className='b hoverable redux'>
                     <div className='opacitycontent'>
                         <h1>Redux ToolKit</h1>
                         <div className='line'></div>
@@ -37,7 +37,7 @@ export const Blocks = () => {
                         </p>
                     </div>
                 </div>
-                <div className='b react'>
+                <div className='b hoverable react'>
                     <div className='opacitycontent'>
                         <h1>React</h1>
                         <div className='line'></div>

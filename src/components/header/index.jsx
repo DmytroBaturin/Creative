@@ -7,7 +7,7 @@ export const Header = () => {
           <Link
               style={{
               textDecoration: "none"
-          }} to='/'><h1
+          }} to='/'><h1 className='hoverable'
               style={{
                   fontWeight: 400
               }}
@@ -17,7 +17,7 @@ export const Header = () => {
         <Link to='/about' style={{
             color: "white",
             textDecoration: "none"
-        }}>more about me.</Link>
+        }} className='hoverable'>more about me.</Link>
       </span>
     </span>
     );

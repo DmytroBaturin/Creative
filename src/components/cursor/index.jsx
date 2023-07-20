@@ -5,8 +5,8 @@ import { gsap } from 'gsap';
 export const Cursor = () => {
     const cursorRef = useRef(null);
     const cursor = useRef(null);
-
     useEffect(() => {
+        const hoverables = document.querySelectorAll('.hoverable');
         const mouseMove = (e) => {
             gsap.to("#cursor", {
                 ease: 'power3.out',
@@ -20,7 +20,24 @@ export const Cursor = () => {
                 x: e.clientX,
                 y: e.clientY,
             });
-        };
+        }
+        const onMouseHover = () => {
+            gsap.to("#cursor", {
+                ease: 'power3.out',
+                scale: 3
+            });
+        }
+        const onMouseHoverOut = () => {
+            gsap.to("#cursor", {
+                ease: 'power3.out',
+                scale: 1
+            });
+        }
+
+            for (let i = 0; i < hoverables.length; i++) {
+                hoverables[i].addEventListener('mouseenter', onMouseHover);
+                hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+        }
         const handleScroll = () => {
             if (cursorRef.current || cursor.current) {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -31,6 +48,8 @@ export const Cursor = () => {
         window.addEventListener('mousemove', mouseMove);
         window.addEventListener('scroll', handleScroll);
         return () => {
+            window.removeEventListener('mouseenter', onMouseHover);
+            window.removeEventListener('mouseleave', onMouseHoverOut);
             window.removeEventListener('mousemove', mouseMove);
             window.removeEventListener('scroll', handleScroll);
         };

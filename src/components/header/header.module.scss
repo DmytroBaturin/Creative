@@ -9,20 +9,16 @@
   display: flex;
   justify-content: space-between;
 }
-.language{
-  display: flex;
-  button, p{
-    background: none;
-    font-weight: 300;
-    border: none;
-    font-size: clamp(1vh, 3vw, 2.4vh);
-    cursor: pointer;
-  }
-}
+//.language{
+//  display: flex;
+//  button, p{
+//    background: none;
+//    font-weight: 300;
+//    border: none;
+//    font-size: clamp(1vh, 3vw, 2.4vh);
+//  }
+//}
 .navbar{
-  a{
-    cursor: pointer;
-  }
   display: flex;
   gap: 5vw;
   button{
