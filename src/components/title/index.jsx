@@ -8,7 +8,7 @@ gsap.registerPlugin(TimelineMax,TextPlugin)
 
 
 export const Title = () => {
-    const text = 'All what you must know about me.';
+    const text = 'Everything what you need to know about me.';
     const titleRef = useRef(null);
     const point = useRef(null);
 
@@ -32,8 +32,7 @@ export const Title = () => {
         <div className={styles.title}>
             <div className='zoom-in'>
                 <h1 ref={titleRef}>
-                    All what you must know
-                    about me<span ref={point} className={styles.point}>.</span>
+                   <span ref={point} className={styles.point}>.</span>
                 </h1>
             </div>
         </div>
