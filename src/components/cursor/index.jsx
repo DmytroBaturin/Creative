@@ -49,8 +49,6 @@ export const Cursor = () => {
         window.addEventListener('mousemove', mouseMove);
         window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('mouseenter', onMouseHover);
-            window.removeEventListener('mouseleave', onMouseHoverOut);
             window.removeEventListener('mousemove', mouseMove);
             window.removeEventListener('scroll', handleScroll);
         };

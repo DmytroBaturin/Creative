@@ -2,13 +2,19 @@
   justify-content: center;
   display: flex;
   width: 100vw;
-  margin-top: 40vh;
+  margin-top: 50vh;
   h1{
     font-size: clamp(4vh, 2vw, 6vh);
     color: black;
   }
   p{
-    font-size: clamp(1vh, 2vw, 3vh);
+    font-size: clamp(2vh, 1vw, 2vh);
+    color: black;
+  }
+  p:last-child{
+    padding-top: 4px;
+    opacity: 0.4;
+    font-size: clamp(1vh, 2vw, 2vh);
     color: black;
   }
 }
@@ -24,4 +30,7 @@
 .text{
   margin-top: 20px;
   width: 50vw;
+}
+.link{
+  opacity: 1 !important;
 }

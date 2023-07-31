@@ -6,7 +6,7 @@ export const Line = () => {
     const calculateHeight = () => {
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
         const maxHeight = 345;
-        const minHeight = 8;
+        const minHeight = 0;
         return (maxHeight - minHeight) * (scrollY / maxScroll) + minHeight;
     };
     useEffect(() => {

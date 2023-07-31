@@ -26,7 +26,7 @@ export const Page1 = () => {
             scrollTrigger: {
                 trigger: ".container",
                 start: "top center",
-                end: "100%",
+                end: "90%",
                 scrub: -2,
             },
         });

@@ -21,6 +21,14 @@ export const Blocks = () => {
                         </p>
                     </div>
                 </div>
+                <div className='b hoverable docker'>
+                    <div className='opacitycontent'>
+                        <h1>Docker</h1>
+                        <div className='line'></div>
+                        <p>
+                        </p>
+                    </div>
+                </div>
                 <div className='b hoverable github'>
                     <div className='opacitycontent'>
                     <h1>Github</h1>
