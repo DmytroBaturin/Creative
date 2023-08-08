@@ -5,10 +5,11 @@
   margin-top: 50vh;
   h1:not(:last-child){
     position: absolute;
+    text-align: center;
+    min-width: max-content;
     bottom: 0vh;
     right: 10vw;
-    width: 100%;
-    font-size: clamp(20vh, 2vw, 6vh);
+    font-size: clamp(14vh, 2vw, 8vh);
   }
 }
 .img{

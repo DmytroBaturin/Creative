@@ -1,10 +1,12 @@
 import styles from './cursor.module.scss';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import {useLocation} from "react-router-dom";
 
 export const Cursor = () => {
     const cursorRef = useRef(null);
     const cursor = useRef(null);
+    let location = useLocation();
     useEffect(() => {
         const hoverables = document.querySelectorAll('.hoverable');
         const mouseMove = (e) => {
@@ -52,7 +54,7 @@ export const Cursor = () => {
             window.removeEventListener('mousemove', mouseMove);
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [location]);
 
     return (
         <>

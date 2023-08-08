@@ -9,11 +9,8 @@ export const SectionTwo = () => {
             </div>
                 <p className={styles.text}>I'm 18 years old, I live in Poland at the moment, but I'm from Ukraine, I've been learning programming for a year now and I don't stop improving my skills, this site is aimed at showing my skills, which you can see below, it will help you understand what I'm capable of!</p>
                 <p style={{
-                    marginTop: '10px',
-                    fontWeight: '500',
-                    color: 'blue'
                 }}
-                className={styles.link}>more...</p>
+                   className={`${styles.link} hovareble`}>more</p>
             </div>
         </div>
     )

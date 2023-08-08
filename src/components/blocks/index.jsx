@@ -26,6 +26,7 @@ export const Blocks = () => {
                         <h1>Docker</h1>
                         <div className='line'></div>
                         <p>
+                            I know how to assemble a container and compose, I did not work with docker often, but I have learned
                         </p>
                     </div>
                 </div>
